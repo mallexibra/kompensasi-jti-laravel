@@ -9,7 +9,7 @@ http://localhost:8000/api
 ## RESOURCES
 ### 1. Authentication
 #### a. Login Users
-- **Endpoint** : `/users/`
+- **Endpoint** : `/login`
 - **Method**: `POST`
 - **Description**: Login users pada platform
 - **Request:**
@@ -24,9 +24,9 @@ http://localhost:8000/api
 {
     status: 200,
     message: "Login users successfully",
-    role: "mahasiswa",
     data: {
         token: "token",
+        role: "mahasiswa",
         users: {
             name: "Maulana Malik Ibrahim",
             username: "mallexibra",
@@ -142,7 +142,16 @@ http://localhost:8000/api
                 task_title: "Tugas 1",
                 task_description: "Tugas 1 silahkan dikerjakan",
                 acc_dosen: "terima",
-                acc_kaprodi: null
+                acc_kaprodi: null,
+                file: "http://localhost:8000/api/requests-finished/1?download=true",
+                url: null,
+                comments: [
+                    {
+                        id: 1,
+                        name: "Hanif",
+                        comment: "Keren sekali"
+                    }
+                ]
             }
         ]
     }
@@ -168,7 +177,15 @@ http://localhost:8000/api
                 task_description: "Tugas 1 silahkan dikerjakan",
                 acc_dosen: "terima",
                 acc_kaprodi: "terima",
-                file: "http://localhost:8000/api/requests-finished/1?download=true"
+                file: "http://localhost:8000/api/requests-finished/1?download=true",
+                url: null,
+                comments: [
+                    {
+                        id: 1,
+                        name: "Hanif",
+                        comment: "Keren sekali"
+                    }
+                ]
             }
         ]
     }
